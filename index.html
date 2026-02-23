@@ -50,16 +50,23 @@
     <meta name="description"
         content="MSP spécialisée pour les experts-comptables : sécurisez vos données clients, optimisez vos logiciels métiers et bénéficiez d'une infogérance haute performance.">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; 
-               script-src 'self' 'unsafe-inline' https://assets.calendly.com https://js.stripe.com https://cdn.jsdelivr.net https://code.iconify.design; 
+               script-src 'self' 'unsafe-inline' https://assets.calendly.com https://js.stripe.com https://cdn.jsdelivr.net https://code.iconify.design https://eu-assets.i.posthog.com; 
                style-src 'self' 'unsafe-inline' https://assets.calendly.com https://cdn.jsdelivr.net https://fonts.googleapis.com; 
                font-src 'self' https://fonts.gstatic.com; 
                img-src 'self' data: https://images.unsplash.com https://assets.calendly.com; 
-               connect-src 'self' https://api.iconify.design; 
+               connect-src 'self' https://api.iconify.design https://eu.i.posthog.com https://eu-assets.i.posthog.com; 
                frame-src https://calendly.com https://js.stripe.com; 
                upgrade-insecure-requests;">
     <title>Cabinet Comptable — Zéro interruption informatique</title>
     <script src="https://code.iconify.design/iconify-icon/2.2.0/iconify-icon.min.js"></script>
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script>
+        !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group identify setPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags resetGroups onFeatureFlags addFeatureFlagsHandler onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+        posthog.init('phc_upv3RaGqnEFdNkXD9Z93fZbWTEZivHYJBiXLWOg8usp', {
+            api_host: 'https://eu.i.posthog.com',
+            defaults: '2026-01-30'
+        })
+    </script>
 </head>
 
 <body class="min-h-screen bg-[#F5F2EA] text-[#22304a] antialiased selection:bg-[#38d0e0] selection:text-[#22304a]">
