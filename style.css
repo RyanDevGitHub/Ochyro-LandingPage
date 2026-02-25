@@ -1,3 +1,6 @@
+/* Google Fonts - Serif pour titres d'autorité */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&display=swap');
+
 /* manrope-regular */
 @font-face {
     font-family: 'Manrope';
@@ -14,6 +17,366 @@
     font-weight: 400;
     font-display: swap;
     src: url('plus-jakarta-sans-v12-latin-regular.woff2') format('woff2');
+}
+
+/* ==================== TYPOGRAPHIE B2B D'AUTORITÉ ==================== */
+
+/* Polices pour titres - Serif d'expertise */
+h1,
+h2,
+h3 {
+    font-family: 'Lora', serif !important;
+    letter-spacing: -0.02em;
+}
+
+/* Corps de texte - Sans-Serif lisible */
+body,
+p,
+li,
+span,
+div {
+    font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;
+}
+
+/* ==================== LAYOUT FULL-BLEED & CENTERED CONTENT ==================== */
+
+/* Conteneurs full-bleed avec max-width limité pour le contenu */
+.section-full-bleed {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.section-full-bleed>* {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content-wrapper {
+    max-width: 1280px;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* Conteneurs flex pour centrer les enfants */
+.mx-auto.max-w-7xl {
+    max-width: 1920px !important;
+}
+
+/* ==================== ESPACEMENTS MASSIFS (Clean Space - MSP Look) ==================== */
+
+section {
+    padding-block: 120px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding-block: 60px;
+    }
+}
+
+@media (max-width: 1280px) {
+    section {
+        padding-block: 60px;
+    }
+}
+
+/* Grilles et espaces de services */
+.mt-10.grid {
+    gap: 40px !important;
+    margin-top: 60px !important;
+}
+
+@media (min-width: 1024px) {
+    .mt-10.grid {
+        gap: 80px !important;
+    }
+}
+
+/* ==================== HERO SECTION - RESPONSIVE CLAMP ==================== */
+
+h1.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    font-weight: 700;
+    font-family: 'Lora', serif !important;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+/* ==================== SECTIONS BACKGROUND ==================== */
+
+section:nth-child(1) {
+    background: linear-gradient(to bottom, rgba(245, 242, 234, 0.5), rgba(255, 255, 255, 1));
+}
+
+section:nth-child(even) {
+    background-color: #ffffff;
+}
+
+section:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* ==================== LISIBILITÉ ET CONTRASTE ==================== */
+
+/* High readability for secondary text */
+.opacity-75 {
+    opacity: 0.75 !important;
+}
+
+.opacity-70 {
+    opacity: 0.7 !important;
+}
+
+/* ==================== HOVER STATES - MINIMAL EFFECT ==================== */
+
+a:not(.btn-primary):not(.btn-secondary):hover {
+    color: #22304a;
+    text-decoration: underline;
+}
+
+.service-card:hover h3 {
+    color: #22304a;
+    transform: translateX(2px);
+}
+
+/* ==================== FOOTER & SECTIONS GÉNÉRALES ==================== */
+
+footer,
+section {
+    border-top: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+section:first-of-type {
+    border-top: none;
+}
+
+/* ==================== CARTES DE SERVICES MINIMALISTES ==================== */
+
+.service-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 0px;
+    padding: 40px;
+    background: #ffffff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: none;
+    position: relative;
+}
+
+.service-card:hover {
+    border-color: #22304a;
+    box-shadow: 0 8px 24px rgba(34, 48, 74, 0.08);
+    transform: translateY(-2px);
+}
+
+.service-card-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0px;
+    background: transparent;
+    color: #22304a;
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #22304a;
+    font-family: 'Lora', serif !important;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(34, 48, 74, 0.75);
+    margin-bottom: 20px;
+}
+
+/* Override existing service cards to be minimalist */
+#services .rounded-3xl.border.border-white\/40 {
+    border: 1px solid #e0e0e0 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    padding: 40px !important;
+    border-radius: 0px !important;
+}
+
+#services .rounded-3xl.border.border-white\/40:hover {
+    border-color: #22304a !important;
+    box-shadow: 0 8px 24px rgba(34, 48, 74, 0.08) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* ==================== BOUTONS - 4px BORDER-RADIUS ==================== */
+
+.btn-primary,
+.btn-secondary {
+    border-radius: 4px !important;
+    transition: all 0.2s ease;
+    font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui !important;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #22304a !important;
+    color: #ffffff !important;
+    border: 1px solid #22304a !important;
+}
+
+.btn-primary:hover {
+    background-color: #1a2332 !important;
+    border-color: #1a2332 !important;
+    box-shadow: 0 4px 12px rgba(34, 48, 74, 0.2) !important;
+}
+
+.btn-secondary {
+    background-color: transparent !important;
+    color: #22304a !important;
+    border: 1px solid #22304a !important;
+}
+
+.btn-secondary:hover {
+    background-color: #f5f5f5 !important;
+    border-color: #22304a !important;
+}
+
+/* Override Tailwind rounded-full buttons to 4px */
+.rounded-full {
+    border-radius: 4px;
+}
+
+/* ==================== ICÔNES MINIMALISTES ==================== */
+
+.icon-minimal {
+    stroke-width: 1.5;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+iconify-icon {
+    stroke-width: 1.5 !important;
+}
+
+/* Icons with lots of whitespace */
+.service-card-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    background: #22304a;
+    color: #ffffff;
+}
+
+.service-card-icon:hover iconify-icon {
+    transform: scale(1.15);
+}
+
+/* ==================== ESPACEMENTS GRANULAIRES ==================== */
+
+.space-massive-y {
+    margin-bottom: 120px;
+}
+
+.space-massive-x {
+    gap: 120px;
+}
+
+@media (max-width: 1024px) {
+    .space-massive-y {
+        margin-bottom: 60px;
+    }
+
+    .space-massive-x {
+        gap: 60px;
+    }
+}
+
+/* ==================== TRANSITIONS LISSES & ANIMATIONS ==================== */
+
+* {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button,
+a,
+input,
+select,
+textarea {
+    transition: all 0.2s ease;
+}
+
+/* Smooth transitions for hover states */
+.service-card,
+.rounded-3xl,
+.rounded-2xl {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==================== TYPOGRAPHIE PROFESSIONNELLE B2B ==================== */
+
+/* Titres avec grammaire d'autorité */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #22304a;
+    font-family: 'Lora', serif !important;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    line-height: 1.15;
+}
+
+h2 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    line-height: 1.3;
+}
+
+/* Corps lisible */
+p,
+li,
+span,
+div {
+    font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui !important;
+    line-height: 1.6;
+}
+
+/* ==================== COULEURS ET CONTRASTE ==================== */
+
+/* Ensure high contrast for readability */
+body {
+    background-color: #ffffff;
+    color: #22304a;
+}
+
+section {
+    background-color: #ffffff;
 }
 
 /* Transitions pour les FAQ */
@@ -1957,7 +2320,7 @@ video {
     }
 
     .lg\:pt-24 {
-        padding-top: 6rem
+        padding-top: 0.5rem
     }
 
     .lg\:text-6xl {

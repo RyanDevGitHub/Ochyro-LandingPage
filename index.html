@@ -51,7 +51,7 @@
                script-src 'self' 'unsafe-inline' https://assets.calendly.com https://js.stripe.com https://cdn.jsdelivr.net https://code.iconify.design https://eu-assets.i.posthog.com; 
                style-src 'self' 'unsafe-inline' https://assets.calendly.com https://cdn.jsdelivr.net https://fonts.googleapis.com; 
                font-src 'self' https://fonts.gstatic.com; 
-               img-src 'self' data: https://images.unsplash.com https://assets.calendly.com; 
+               img-src 'self' data: https://images.unsplash.com https://assets.calendly.com https://ochyro.net/src/imgs/favicon.ico; 
                connect-src 'self' https://api.iconify.design https://eu.i.posthog.com https://eu-assets.i.posthog.com; 
                frame-src https://calendly.com https://js.stripe.com; 
                upgrade-insecure-requests;">
@@ -154,8 +154,7 @@
                             </span>
                         </div>
 
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05] text-[#22304a]"
-                            style="font-family: Manrope, ui-sans-serif, system-ui;">
+                        <h1 class="hero-title text-[#22304a]">
                             Zéro interruption informatique <br class="hidden sm:block">
                             <span class="text-[#38d0e0] border-r-4 border-[#38d0e0] pr-1" id="typewriter"></span>
                         </h1>
@@ -179,7 +178,8 @@
                             </a>
                         </div>
 
-                        <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div
+                            class="grid grid-cols-2 md:grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6 w-full max-w-7xl mx-auto mt-12">
                             <div class="rounded-2xl border border-[#22304a]/10 bg-white/40 backdrop-blur-xl p-4">
                                 <div class="flex items-start gap-3">
                                     <div
@@ -214,19 +214,21 @@
                                 </div>
                             </div>
 
-                            <div class="rounded-2xl border border-[#22304a]/10 bg-white/40 backdrop-blur-xl p-4">
+                            <div
+                                class="rounded-2xl border border-[#22304a]/10 bg-white/40 backdrop-blur-xl p-4 min-w-[200px]">
                                 <div class="flex items-start gap-3">
                                     <div
                                         class="h-10 w-10 shrink-0 rounded-xl bg-[#22304a] text-[#F5F2EA] flex items-center justify-center">
                                         <iconify-icon icon="solar:graph-up-linear" width="20" class="text-[#F5F2EA]"
                                             style="stroke-width:1.5;"></iconify-icon>
                                     </div>
-                                    <div>
+                                    <div class="flex-1">
                                         <div class="text-sm font-semibold tracking-tight"
                                             style="font-family: Manrope, ui-sans-serif, system-ui;">Performance</div>
-                                        <div class="text-xs text-[#22304a]/70"
-                                            style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">Apps
-                                            fluides</div>
+                                        <div class="text-xs text-[#22304a]/70 whitespace-normal"
+                                            style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
+                                            Apps fluides
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -241,17 +243,18 @@
 
                         <div
                             class="relative rounded-[2.5rem] border border-[#22304a]/10 bg-white/40 backdrop-blur-xl p-6 sm:p-8 shadow-sm shadow-[#22304a]/10 overflow-hidden">
-                            <div class="absolute inset-0 opacity-60" style="background:
-            linear-gradient(to right, rgba(34,48,74,0.05) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(34,48,74,0.05) 1px, transparent 1px);
-            background-size: 3.5rem 3.5rem;"></div>
+                            <div class="absolute inset-0 opacity-100" style="background:
+                linear-gradient(to right, rgba(34,48,74,0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(34,48,74,0.05) 1px, transparent 1px);
+                background-size: 3.5rem 3.5rem;"> <img src="./src/imgs/unnamed.jpg" alt=""></div>
 
                             <div class="relative aspect-[4/3] w-full">
                                 <div class="absolute inset-0 rounded-[2rem]" style="background: radial-gradient(circle at 30% 35%, rgba(56, 208, 224, 0.55), transparent 55%),
-                radial-gradient(circle at 70% 70%, rgba(34, 48, 74, 0.22), transparent 60%);">
+                    radial-gradient(circle at 70% 70%, rgba(34, 48, 74, 0.22), transparent 60%);">
+
                                 </div>
 
-                                <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-56 w-56 sm:h-64 sm:w-64 rounded-[2.25rem] rotate-12 border border-white/40 shadow-[0_20px_60px_rgba(34,48,74,0.18)]"
+                                <!-- <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-56 w-56 sm:h-64 sm:w-64 rounded-[2.25rem] rotate-12 border border-white/40 shadow-[0_20px_60px_rgba(34,48,74,0.18)]"
                                     style="background: linear-gradient(135deg, rgba(255,255,255,0.75), rgba(255,255,255,0.25));">
                                 </div>
 
@@ -261,7 +264,7 @@
 
                                 <div class="absolute right-[14%] bottom-[16%] h-24 w-24 sm:h-28 sm:w-28 rounded-[1.5rem] rotate-[18deg] border border-white/35 shadow-[0_18px_50px_rgba(34,48,74,0.14)]"
                                     style="background: linear-gradient(135deg, rgba(34,48,74,0.20), rgba(255,255,255,0.25));">
-                                </div>
+                                </div> -->
 
                                 <!-- Conteneur des slides -->
                                 <div class="carousel-container relative h-full">
@@ -418,8 +421,7 @@
         <section class="py-20 sm:py-24">
             <div class="mx-auto max-w-7xl px-6">
                 <div class="max-w-3xl">
-                    <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-[#22304a]"
-                        style="font-family: Manrope, ui-sans-serif, system-ui;">
+                    <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-[#22304a]">
                         Marre des lenteurs sur Cegid ou des pannes serveur le 15 du mois ?
                     </h2>
                     <p class="mt-4 text-base text-[#22304a]/75 leading-relaxed"
