@@ -36,7 +36,7 @@
   ]
 }
 </script>
-    <link rel="icon" href="https://ochyro.net/src/imgs/favicon.ico">
+    <link rel="icon" href="https://ochyro.net/src/imgs/favicon.svg">
     <link rel="apple-touch-icon" href="https://ochyro.net/src/imgs/ochyro_logo_no_background.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" media="print"
@@ -51,7 +51,7 @@
                script-src 'self' 'unsafe-inline' https://assets.calendly.com https://js.stripe.com https://cdn.jsdelivr.net https://code.iconify.design https://eu-assets.i.posthog.com; 
                style-src 'self' 'unsafe-inline' https://assets.calendly.com https://cdn.jsdelivr.net https://fonts.googleapis.com; 
                font-src 'self' https://fonts.gstatic.com; 
-               img-src 'self' data: https://images.unsplash.com https://assets.calendly.com https://ochyro.net/src/imgs/favicon.ico; 
+               img-src 'self' data: https://images.unsplash.com https://assets.calendly.com https://ochyro.net/src/imgs/favicon.svg; 
                connect-src 'self' https://api.iconify.design https://eu.i.posthog.com https://eu-assets.i.posthog.com; 
                frame-src https://calendly.com https://js.stripe.com; 
                upgrade-insecure-requests;">
@@ -88,7 +88,8 @@
                 </a>
                 <nav class="hidden lg:flex items-center gap-8 text-sm"
                     style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
-                    <a href="/infogerance" class="text-[#22304a]/70 hover:text-[#22304a] transition-colors">Infogérance</a>
+                    <a href="/infogerance"
+                        class="text-[#22304a]/70 hover:text-[#22304a] transition-colors">Infogérance</a>
                     <a href="#services" class="text-[#22304a]/70 hover:text-[#22304a] transition-colors">Services</a>
                     <a href="#expertise" class="text-[#22304a]/70 hover:text-[#22304a] transition-colors">Expertise</a>
                     <a href="#no_expert" class="text-[#22304a]/70 hover:text-[#22304a] transition-colors">Nos
@@ -726,7 +727,7 @@
                         <div class="px-6 sm:px-8 py-10 sm:py-12">
                             <div class="grid gap-10 lg:grid-cols-2 lg:gap-12 items-start">
                                 <!-- Left -->
-                                <div class="max-w-xl">
+                                <div class="max-w-xl" >
                                     <div
                                         class="inline-flex items-center gap-2 rounded-full border border-[#22304a]/10 bg-white/35 backdrop-blur-xl px-4 py-2">
                                         <span class="inline-flex h-2 w-2 rounded-full bg-[#38d0e0]"></span>
@@ -1537,6 +1538,8 @@
             });
         });
     </script>
+
+
     <script>
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
