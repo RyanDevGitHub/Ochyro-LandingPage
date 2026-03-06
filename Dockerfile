@@ -1,10 +1,11 @@
 FROM nginx:stable
 WORKDIR /usr/share/nginx/html
 
-# 1. Copie d'abord ton code (comme avant)
+# On copie tout
 COPY . .
 
-# 2. Écrase la configuration par défaut de Nginx par la tienne
+# IMPORTANT : On change la config pour pointer sur le dossier public
+# Crée un fichier default.conf (voir ci-dessous) et ajoute cette ligne :
 COPY default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
