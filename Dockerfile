@@ -1,12 +1,17 @@
-FROM nginx:stable
-WORKDIR /usr/share/nginx/html
+# On utilise une image qui contient à la fois Nginx et PHP 8.2
+FROM webdevops/php-nginx:8.2-alpine
 
-# On copie tout
+# On définit le dossier où sera ton code
+WORKDIR /app
+
+# On dit à cette image que la racine du site est le dossier 'public'
+# Cela remplace le besoin de modifier manuellement le default.conf
+ENV WEB_DOCUMENT_ROOT=/app/public
+
+# On copie tout ton projet dans le dossier /app
 COPY . .
 
-# IMPORTANT : On change la config pour pointer sur le dossier public
-# Crée un fichier default.conf (voir ci-dessous) et ajoute cette ligne :
-COPY default.conf /etc/nginx/conf.d/default.conf
+# On s'assure que les permissions sont bonnes pour le serveur web
+RUN chown -R application:application /app
 
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
