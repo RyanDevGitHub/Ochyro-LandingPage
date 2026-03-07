@@ -16,6 +16,7 @@ $contactController = new ContactController();
 $blogController = new BlogController();
 
 $router->get('/', [$homeController, 'index']);
+$router->get('/rendez-vous-confirme', [$homeController, 'appointmentConfirmed']);
 $router->get('/infogerance', [$infogeranceController, 'index']);
 $router->get('/contact', [$contactController, 'index']);
 $router->get('/blog', [$blogController, 'index']);

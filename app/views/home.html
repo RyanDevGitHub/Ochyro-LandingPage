@@ -1704,6 +1704,29 @@
         });
     </script>
     <script>
+        // Redirection apres confirmation d'un rendez-vous Calendly
+        (function () {
+            const confirmationPath = '/rendez-vous-confirme';
+            const calendlyOriginPattern = /^https:\/\/([a-z0-9-]+\.)?calendly\.com$/i;
+
+            window.addEventListener('message', function (event) {
+                if (!calendlyOriginPattern.test(event.origin || '')) {
+                    return;
+                }
+
+                if (!event.data || typeof event.data !== 'object') {
+                    return;
+                }
+
+                if (event.data.event !== 'calendly.event_scheduled') {
+                    return;
+                }
+
+                window.location.href = confirmationPath;
+            });
+        })();
+    </script>
+    <script>
         const text = "pour votre cabinet comptable.";
         const speed = 75; // Vitesse en millisecondes
         let i = 0;

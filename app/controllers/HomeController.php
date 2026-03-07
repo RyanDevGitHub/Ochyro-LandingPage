@@ -10,4 +10,9 @@ final class HomeController extends Controller
     {
         $this->render('home.html');
     }
+
+    public function appointmentConfirmed(): void
+    {
+        $this->render('rendez-vous-confirme.html');
+    }
 }
