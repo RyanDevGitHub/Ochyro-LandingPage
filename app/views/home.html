@@ -1539,17 +1539,18 @@
                     'fr': {
                         consent_modal: {
                             title: 'Nous utilisons des cookies 🍪',
-                            description: 'Nous utilisons des cookies pour Calendly et Stripe afin d\'assurer le bon fonctionnement de la prise de rendez-vous et la sécurité.',
+                            description: 'Nous utilisons des cookies pour Calendly et Stripe afin d\'assurer le bon fonctionnement de la prise de rendez-vous et la sécurité. Les cookies essentiels sont toujours actifs. <button type="button" data-cc="c-settings" class="cc-link">Personnaliser</button>',
                             primary_btn: { text: 'Tout accepter', role: 'accept_all' },
-                            secondary_btn: { text: 'Paramétrer', role: 'settings' }
+                            secondary_btn: { text: 'Tout refuser', role: 'accept_necessary' }
                         },
                         settings_modal: {
                             title: 'Préférences des cookies',
                             save_settings_btn: 'Enregistrer',
                             accept_all_btn: 'Tout accepter',
+                            reject_all_btn: 'Tout refuser',
                             blocks: [
-                                { title: 'Cookies nécessaires', description: 'Essentiels pour Stripe (paiement/sécurité).', toggle: { value: 'essential', enabled: true, readonly: true } },
-                                { title: 'Services tiers', description: 'Utilisés par Calendly pour la gestion des rendez-vous.', toggle: { value: 'targeting', enabled: false, readonly: false } }
+                                { title: 'Cookies nécessaires', description: 'Essentiels pour Stripe (paiement/sécurité). Toujours actifs, ils ne peuvent pas être désactivés.', toggle: { value: 'essential', enabled: true, readonly: true } },
+                                { title: 'Services tiers', description: 'Utilisés par Calendly pour la gestion des rendez-vous. Vous pouvez les désactiver sans affecter les fonctions essentielles du site.', toggle: { value: 'targeting', enabled: false, readonly: false } }
                             ]
                         }
                     }
