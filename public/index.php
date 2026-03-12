@@ -7,13 +7,19 @@ require_once __DIR__ . '/../app/controllers/HomeController.php';
 require_once __DIR__ . '/../app/controllers/InfogeranceController.php';
 require_once __DIR__ . '/../app/controllers/ContactController.php';
 require_once __DIR__ . '/../app/controllers/BlogController.php';
+require_once __DIR__ . '/../app/controllers/LeadMagnetController.php';
 
 $router = new Router();
 
-$homeController = new HomeController();
+$homeController       = new HomeController();
 $infogeranceController = new InfogeranceController();
-$contactController = new ContactController();
-$blogController = new BlogController();
+$contactController    = new ContactController();
+$blogController       = new BlogController();
+$leadMagnetController = new LeadMagnetController();
+
+// Lead magnet — POST + OPTIONS (CORS preflight)
+$router->add('POST',    '/lead-magnet', [$leadMagnetController, 'subscribe']);
+$router->add('OPTIONS', '/lead-magnet', [$leadMagnetController, 'subscribe']);
 
 $router->get('/', [$homeController, 'index']);
 $router->get('/rendez-vous-confirme', [$homeController, 'appointmentConfirmed']);
