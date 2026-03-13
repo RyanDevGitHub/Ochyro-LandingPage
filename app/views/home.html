@@ -225,6 +225,29 @@
                         </div>
 
                         <div
+                            class="mt-6 max-w-2xl rounded-[1.75rem] border border-[#22304a]/10 bg-white/55 p-5 backdrop-blur-xl shadow-sm shadow-[#22304a]/10">
+                            <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                                <div>
+                                    <p class="mt-2 text-3xl font-semibold tracking-tight text-[#22304a]"
+                                        style="font-family: Manrope, ui-sans-serif, system-ui;">
+                                        Dès 39 € HT
+                                        <span class="text-base font-medium text-[#22304a]/70">/ poste / mois</span>
+                                    </p>
+                                </div>
+                                <a href="#contact"
+                                    class="inline-flex h-11 items-center justify-center rounded-full border border-[#22304a]/12 bg-[#F5F2EA] px-5 text-sm font-semibold text-[#22304a] transition hover:bg-white"
+                                    style="font-family: Manrope, ui-sans-serif, system-ui;">
+                                    Demander un chiffrage
+                                </a>
+                            </div>
+                            <p class="mt-3 text-xs leading-relaxed text-[#22304a]/68"
+                                style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
+                                Repère pour cabinets de 5 postes et plus. Ajusté selon serveurs, sauvegardes,
+                                Microsoft 365 et niveau de cybersécurité.
+                            </p>
+                        </div>
+
+                        <div
                             class="grid grid-cols-2 md:grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6 w-full max-w-7xl mx-auto mt-12">
                             <div class="rounded-2xl border border-[#22304a]/10 bg-white/40 backdrop-blur-xl p-4">
                                 <div class="flex items-start gap-3">
@@ -1706,9 +1729,9 @@
                                                 style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;" />
                                         </label>
                                         <button type="submit"
-                                            class="w-full rounded-xl bg-[#22304a] text-[#F5F2EA] py-3.5 text-sm font-semibold hover:bg-[#1b2740] transition-colors"
+                                            class="inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-[#22304a] px-5 py-3.5 text-sm font-semibold leading-none text-[#F5F2EA] shadow-[0_10px_24px_rgba(34,48,74,0.18)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1b2740] hover:shadow-[0_14px_30px_rgba(34,48,74,0.22)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38d0e0] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F5F2EA] disabled:cursor-not-allowed disabled:translate-y-0 disabled:bg-[#22304a]/55 disabled:text-[#F5F2EA]/80 disabled:shadow-none sm:w-auto py-2 px-0"
                                             style="font-family: Manrope, ui-sans-serif, system-ui;">
-                                            Recevoir la checklist gratuite
+                                            Telecharger la checklist
                                         </button>
                                     </form>
 
@@ -2191,10 +2214,9 @@
                                     style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;" />
                             </label>
                             <button type="submit"
-                                class="w-full rounded-xl bg-[#22304a] text-[#F5F2EA] px-6 py-4 text-sm font-semibold hover:bg-[#1b2740] transition-colors"
-                                style="font-family: Manrope, ui-sans-serif, system-ui; box-shadow: 0 8px 22px rgba(34, 48, 74, 0.24); transition: transform 0.2s ease, box-shadow 0.2s ease;"
-                                >
-                                Recevoir la checklist gratuite
+                                class="inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-[#22304a] px-5 py-3.5 text-sm font-semibold leading-none text-[#F5F2EA] shadow-[0_10px_24px_rgba(34,48,74,0.18)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1b2740] hover:shadow-[0_14px_30px_rgba(34,48,74,0.22)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38d0e0] focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:translate-y-0 disabled:bg-[#22304a]/55 disabled:text-[#F5F2EA]/80 disabled:shadow-none sm:w-auto"
+                                style="font-family: Manrope, ui-sans-serif, system-ui;">
+                                Telecharger la checklist
                             </button>
                         </form>
 
@@ -2337,7 +2359,11 @@
 
             if (!email) return;
 
-            btn.disabled    = true;
+            var defaultLabel = btn.getAttribute('data-default-label') || btn.textContent.trim();
+            btn.setAttribute('data-default-label', defaultLabel);
+            btn.disabled = true;
+            btn.setAttribute('aria-busy', 'true');
+            btn.setAttribute('aria-disabled', 'true');
             btn.textContent = 'Envoi en cours...';
 
             fetch('/lead-magnet', {
@@ -2353,14 +2379,18 @@
                     // Mark as converted so pop-in doesn't show again
                     setDismissed();
                 } else {
-                    btn.disabled    = false;
-                    btn.textContent = 'Recevoir la checklist gratuite';
+                    btn.disabled = false;
+                    btn.removeAttribute('aria-busy');
+                    btn.removeAttribute('aria-disabled');
+                    btn.textContent = defaultLabel;
                     alert(data.error || 'Une erreur est survenue, veuillez réessayer.');
                 }
             })
             .catch(function () {
-                btn.disabled    = false;
-                btn.textContent = 'Recevoir la checklist gratuite';
+                btn.disabled = false;
+                btn.removeAttribute('aria-busy');
+                btn.removeAttribute('aria-disabled');
+                btn.textContent = defaultLabel;
                 // Fallback: lien direct vers le PDF
                 window.open('/assets/checklist-it-securite.pdf', '_blank');
             });
