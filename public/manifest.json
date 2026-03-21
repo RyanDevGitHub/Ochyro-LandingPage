@@ -1,0 +1,21 @@
+{
+  "name": "Ochyro IT",
+  "short_name": "Ochyro",
+  "description": "MSP spécialisée pour experts-comptables",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#22304a",
+  "theme_color": "#22304a",
+  "icons": [
+    {
+      "src": "/assets/imgs/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/imgs/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
