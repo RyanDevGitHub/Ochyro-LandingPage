@@ -77,28 +77,75 @@ final class BrevoService
         return isset($response['messageId']);
     }
 
+    public function sendContactRequest(string $name, string $email, string $phone, string $message): bool
+    {
+        $recipient = $_ENV['BREVO_CONTACT_RECIPIENT'] ?? $this->senderEmail;
+        $subject = 'Nouvelle demande de contact - ' . $name;
+        $html = $this->buildContactEmail($name, $email, $phone, $message);
+
+        $payload = [
+            'sender' => ['name' => $this->senderName, 'email' => $this->senderEmail],
+            'to' => [['email' => $recipient]],
+            'replyTo' => ['email' => $email, 'name' => $name],
+            'subject' => $subject,
+            'htmlContent' => $html,
+        ];
+
+        $response = $this->post('https://api.brevo.com/v3/smtp/email', $payload);
+        return isset($response['messageId']);
+    }
+
     // ── Privés ────────────────────────────────────────────────────────────────
 
     private function post(string $url, array $payload): array
     {
-        $ch = curl_init($url);
-        curl_setopt_array($ch, [
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_POST           => true,
-            CURLOPT_POSTFIELDS     => json_encode($payload),
-            CURLOPT_HTTPHEADER     => [
-                'Content-Type: application/json',
-                'Accept: application/json',
-                'api-key: ' . $this->apiKey,
+        $jsonPayload = json_encode($payload);
+        $headers = [
+            'Content-Type: application/json',
+            'Accept: application/json',
+            'api-key: ' . $this->apiKey,
+        ];
+
+        if (function_exists('curl_init')) {
+            $ch = curl_init($url);
+            curl_setopt_array($ch, [
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_POST => true,
+                CURLOPT_POSTFIELDS => $jsonPayload,
+                CURLOPT_HTTPHEADER => $headers,
+                CURLOPT_TIMEOUT => 10,
+            ]);
+
+            $body = curl_exec($ch);
+            $code = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            $curlError = curl_error($ch);
+            curl_close($ch);
+
+            if (is_string($body) && $body !== '') {
+                return json_decode($body, true) ?? [];
+            }
+
+            if ($curlError !== '') {
+                error_log('[Ochyro Brevo] curl error: ' . $curlError);
+            }
+
+            if ($code >= 500) {
+                return [];
+            }
+        }
+
+        $context = stream_context_create([
+            'http' => [
+                'method' => 'POST',
+                'header' => implode("\r\n", $headers),
+                'content' => $jsonPayload,
+                'ignore_errors' => true,
+                'timeout' => 10,
             ],
-            CURLOPT_TIMEOUT        => 10,
         ]);
 
-        $body = curl_exec($ch);
-        $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
-
-        if ($body === false || $code >= 500) {
+        $body = @file_get_contents($url, false, $context);
+        if (!is_string($body) || $body === '') {
             return [];
         }
 
@@ -184,6 +231,54 @@ final class BrevoService
 
       </table>
     </td></tr>
+  </table>
+</body>
+</html>
+HTML;
+    }
+
+    private function buildContactEmail(string $name, string $email, string $phone, string $message): string
+    {
+        $safeName = htmlspecialchars($name, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+        $safeEmail = htmlspecialchars($email, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+        $safePhone = htmlspecialchars($phone !== '' ? $phone : 'Non renseigné', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+        $safeMessage = nl2br(htmlspecialchars($message, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'));
+
+        return <<<HTML
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:24px;background:#f5f7fa;font-family:Arial,sans-serif;color:#22304a;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="max-width:680px;margin:0 auto;background:#ffffff;border-radius:10px;overflow:hidden;">
+    <tr>
+      <td style="background:#22304a;padding:24px 28px;color:#ffffff;">
+        <div style="font-size:22px;font-weight:bold;">Nouvelle demande de contact</div>
+        <div style="margin-top:6px;font-size:13px;color:#d7e3f4;">Formulaire site Ochyro</div>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:28px;">
+        <p style="margin:0 0 16px;font-size:14px;line-height:1.6;">Une nouvelle demande vient d'être envoyée depuis la page contact.</p>
+        <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+          <tr>
+            <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;width:180px;font-weight:bold;">Nom / Cabinet</td>
+            <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;">{$safeName}</td>
+          </tr>
+          <tr>
+            <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;font-weight:bold;">Email</td>
+            <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;">{$safeEmail}</td>
+          </tr>
+          <tr>
+            <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;font-weight:bold;">Téléphone</td>
+            <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;">{$safePhone}</td>
+          </tr>
+          <tr>
+            <td style="padding:14px 0 8px;font-weight:bold;vertical-align:top;">Message</td>
+            <td style="padding:14px 0 8px;line-height:1.7;">{$safeMessage}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
   </table>
 </body>
 </html>

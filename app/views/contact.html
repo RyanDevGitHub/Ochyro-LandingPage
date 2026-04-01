@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 
@@ -7,17 +7,17 @@
     <meta name="indexnow-key" content="d8f3a1b2c9e4f7a6">
     <link rel="canonical" href="https://ochyro.net/contact">
     <meta name="keywords"
-        content="MSP, expert-comptable, infogérance, cybersécurité, informatique cabinet comptable, maintenance informatique, Cegid, Sage, ACD, sauvegarde immuable">
+        content="MSP, expert-comptable, infogÃ©rance, cybersÃ©curitÃ©, informatique cabinet comptable, maintenance informatique, Cegid, Sage, ACD, sauvegarde immuable">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Ochyro IT — Zéro interruption informatique pour Experts-Comptables">
+    <meta property="og:title" content="Ochyro IT â€” ZÃ©ro interruption informatique pour Experts-Comptables">
     <meta property="og:description"
-        content="Sécurisez vos données clients et garantissez votre productivité, même en pleine période fiscale. MSP spécialisée pour les cabinets comptables.">
+        content="SÃ©curisez vos donnÃ©es clients et garantissez votre productivitÃ©, mÃªme en pleine pÃ©riode fiscale. MSP spÃ©cialisÃ©e pour les cabinets comptables.">
     <meta property="og:image" content="https://ochyro.net/assets/imgs/ochyro_logo_no_background.svg">
     <meta property="og:url" content="https://ochyro.net/contact">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contactez Ochyro IT — MSP pour cabinets comptables">
-    <meta name="twitter:description" content="Contactez Ochyro IT pour un audit gratuit de votre informatique. MSP spécialisée pour cabinets comptables en Île-de-France.">
+    <meta name="twitter:title" content="Contactez Ochyro IT â€” MSP pour cabinets comptables">
+    <meta name="twitter:description" content="Contactez Ochyro IT pour un audit gratuit de votre informatique. MSP spÃ©cialisÃ©e pour cabinets comptables en ÃŽle-de-France.">
     <meta name="twitter:image" content="https://ochyro.net/assets/imgs/ochyro_logo_no_background.svg">
     <meta name="theme-color" content="#22304a">
 
@@ -58,16 +58,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Contactez Ochyro IT pour un audit gratuit de votre informatique. MSP spécialisée pour cabinets comptables en Île-de-France.">
+        content="Contactez Ochyro IT pour un audit gratuit de votre informatique. MSP spÃ©cialisÃ©e pour cabinets comptables en ÃŽle-de-France.">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; 
                script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://assets.calendly.com https://js.stripe.com https://cdn.jsdelivr.net https://code.iconify.design https://eu-assets.i.posthog.com; 
                style-src 'self' 'unsafe-inline' https://assets.calendly.com https://cdn.jsdelivr.net https://fonts.googleapis.com; 
                font-src 'self' https://fonts.gstatic.com; 
-               img-src 'self' data: https://images.unsplash.com https://assets.calendly.com;
-               connect-src 'self' https://api.iconify.design https://eu.i.posthog.com https://eu-assets.i.posthog.com; 
+               img-src 'self' data: https://images.unsplash.com https://assets.calendly.com https://www.google.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://*.google.com;
+               connect-src 'self' https://api.iconify.design https://eu.i.posthog.com https://eu-assets.i.posthog.com https://www.google.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://*.google.com; 
                frame-src https://calendly.com https://js.stripe.com; 
                upgrade-insecure-requests;">
-    <title>Contactez Ochyro IT — MSP pour cabinets comptables</title>
+    <title>Contactez Ochyro IT â€” MSP pour cabinets comptables</title>
     <script src="https://code.iconify.design/iconify-icon/2.2.0/iconify-icon.min.js" defer></script>
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script>
@@ -78,12 +78,31 @@
         })
     </script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17987750029"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-17987750029');
+        (function () {
+            const host = window.location.hostname;
+            const isLocal = host === 'localhost' || host === '127.0.0.1' || host === '::1';
+            let isFramed = false;
+            try {
+                isFramed = window.top !== window.self;
+            } catch (e) {
+                isFramed = true;
+            }
+
+            if (isLocal || isFramed) {
+                return;
+            }
+
+            const gtagScript = document.createElement('script');
+            gtagScript.async = true;
+            gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17987750029';
+            document.head.appendChild(gtagScript);
+
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function () { dataLayer.push(arguments); };
+            gtag('js', new Date());
+            gtag('config', 'AW-17987750029');
+        })();
     </script>
 </head>
 
@@ -103,13 +122,13 @@
                             style="font-family: Manrope, ui-sans-serif, system-ui;">Ochyro IT</div>
                         <div class="text-xs text-[#22304a]/70"
                             style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">Informatique &amp;
-                            cybersécurité</div>
+                            cybersÃ©curitÃ©</div>
                     </div>
                 </a>
                 <nav class="hidden lg:flex items-center gap-8 text-sm"
                     style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
                     <a href="/infogerance"
-                        class="text-[#22304a]/70 hover:text-[#22304a] transition-colors">Infogérance</a>
+                        class="text-[#22304a]/70 hover:text-[#22304a] transition-colors">InfogÃ©rance</a>
                     <a href="#services" class="text-[#22304a]/70 hover:text-[#22304a] transition-colors">Services</a>
                     <a href="#expertise" class="text-[#22304a]/70 hover:text-[#22304a] transition-colors">Expertise</a>
                     <a href="#no_expert" class="text-[#22304a]/70 hover:text-[#22304a] transition-colors">Nos
@@ -137,7 +156,7 @@
                 <div class="rounded-2xl border border-[#22304a]/10 bg-white/50 backdrop-blur-xl p-4">
                     <div class="flex flex-col gap-3 text-sm"
                         style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
-                        <a href="/infogerance" class="px-3 py-2 rounded-xl hover:bg-white/70 transition">Infogérance</a>
+                        <a href="/infogerance" class="px-3 py-2 rounded-xl hover:bg-white/70 transition">InfogÃ©rance</a>
                         <a href="#services" class="px-3 py-2 rounded-xl hover:bg-white/70 transition">Services</a>
                         <a href="#expertise" class="px-3 py-2 rounded-xl hover:bg-white/70 transition">Expertise</a>
                         <a href="#no_expert" class="px-3 py-2 rounded-xl hover:bg-white/70 transition">Nos Experts</a>
@@ -172,7 +191,7 @@
                     </h2>
                     <p class="mt-4 text-base text-[#22304a]/75 leading-relaxed"
                         style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
-                        Besoin d’un devis, d’un audit, ou d’un avis rapide ? Écris-nous ou appelle-nous.
+                        Besoin dâ€™un devis, dâ€™un audit, ou dâ€™un avis rapide ? Ã‰cris-nous ou appelle-nous.
                     </p>
                 </div>
 
@@ -193,14 +212,14 @@
                                 </div>
                                 <p class="mt-2 text-sm text-[#22304a]/75 leading-relaxed"
                                     style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
-                                    Réponse rapide sur les sujets : infogérance, Cegid/Sage, serveurs, cybersécurité,
+                                    RÃ©ponse rapide sur les sujets : infogÃ©rance, Cegid/Sage, serveurs, cybersÃ©curitÃ©,
                                     sauvegardes.
                                 </p>
                             </div>
                         </div>
 
                         <div class="mt-8 grid gap-4">
-                            <!-- Téléphone -->
+                            <!-- TÃ©lÃ©phone -->
                             <a href="tel:+33614661732"
                                 class="group rounded-2xl border border-[#22304a]/10 bg-[#F5F2EA]/70 backdrop-blur-xl p-5 hover:bg-white/60 transition flex items-start gap-4">
                                 <div
@@ -211,7 +230,7 @@
                                 <div class="flex-1">
                                     <div class="text-sm font-semibold tracking-tight text-[#22304a]"
                                         style="font-family: Manrope, ui-sans-serif, system-ui;">
-                                        Téléphone
+                                        TÃ©lÃ©phone
                                     </div>
                                     <div class="mt-1 text-sm text-[#22304a]/75"
                                         style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
@@ -259,13 +278,11 @@
                                     style="stroke-width:1.5;"></iconify-icon>
                                 <p class="text-sm text-[#22304a]/75 leading-relaxed"
                                     style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
-                                    Horaires : Lun–Ven • 9h–18h (urgence possible selon contrat).
+                                    Horaires : Lunâ€“Ven â€¢ 9hâ€“18h (urgence possible selon contrat).
                                 </p>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Formulaire simple (optionnel, marche sans backend via mailto) -->
+                    </div>                    <!-- Formulaire de contact -->
                     <div
                         class="rounded-3xl border border-[#22304a]/10 bg-white/40 backdrop-blur-xl p-7 sm:p-8 shadow-sm shadow-[#22304a]/10">
                         <div class="text-lg font-semibold tracking-tight text-[#22304a]"
@@ -274,76 +291,73 @@
                         </div>
                         <p class="mt-2 text-sm text-[#22304a]/75"
                             style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
-                            Remplis et valide : ça ouvre ton client mail avec le message prêt.
+                            Remplis le formulaire et ton message sera envoye directement a l'equipe Ochyro.
                         </p>
-
-                        <form class="mt-6 space-y-4" action="mailto:contact@ochyro.net" method="post"
-                            enctype="text/plain">
+                        <form id="contact-form" class="mt-6 space-y-4">
                             <div>
                                 <label class="block text-xs font-semibold tracking-wide text-[#22304a]/70 uppercase"
                                     style="font-family: Manrope, ui-sans-serif, system-ui;">
                                     Nom / Cabinet
                                 </label>
-                                <input name="Nom" required
+                                <input name="name" required
                                     class="mt-2 w-full rounded-2xl border border-[#22304a]/15 bg-white/50 backdrop-blur-xl px-4 py-3 text-sm text-[#22304a] placeholder:text-[#22304a]/45 focus:outline-none focus:ring-2 focus:ring-[#38d0e0]/40"
                                     style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;"
                                     placeholder="Ex: Cabinet Dupont">
                             </div>
-
                             <div class="grid gap-4 sm:grid-cols-2">
                                 <div>
                                     <label class="block text-xs font-semibold tracking-wide text-[#22304a]/70 uppercase"
                                         style="font-family: Manrope, ui-sans-serif, system-ui;">
                                         Email
                                     </label>
-                                    <input type="email" name="Email" required
+                                    <input type="email" name="email" required
                                         class="mt-2 w-full rounded-2xl border border-[#22304a]/15 bg-white/50 backdrop-blur-xl px-4 py-3 text-sm text-[#22304a] placeholder:text-[#22304a]/45 focus:outline-none focus:ring-2 focus:ring-[#38d0e0]/40"
                                         style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;"
                                         placeholder="vous@cabinet.fr">
                                 </div>
-
                                 <div>
                                     <label class="block text-xs font-semibold tracking-wide text-[#22304a]/70 uppercase"
                                         style="font-family: Manrope, ui-sans-serif, system-ui;">
-                                        Téléphone
+                                        Telephone
                                     </label>
-                                    <input type="tel" name="Téléphone"
+                                    <input type="tel" name="phone"
                                         class="mt-2 w-full rounded-2xl border border-[#22304a]/15 bg-white/50 backdrop-blur-xl px-4 py-3 text-sm text-[#22304a] placeholder:text-[#22304a]/45 focus:outline-none focus:ring-2 focus:ring-[#38d0e0]/40"
                                         style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;"
                                         placeholder="06 00 00 00 00">
                                 </div>
                             </div>
-
                             <div>
                                 <label class="block text-xs font-semibold tracking-wide text-[#22304a]/70 uppercase"
                                     style="font-family: Manrope, ui-sans-serif, system-ui;">
                                     Message
                                 </label>
-                                <textarea name="Message" rows="5" required
+                                <textarea name="message" rows="5" required
                                     class="mt-2 w-full rounded-2xl border border-[#22304a]/15 bg-white/50 backdrop-blur-xl px-4 py-3 text-sm text-[#22304a] placeholder:text-[#22304a]/45 focus:outline-none focus:ring-2 focus:ring-[#38d0e0]/40"
                                     style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;"
                                     placeholder="Explique rapidement ton besoin (Cegid, lenteurs, sauvegardes, serveurs, ransomware, etc.)"></textarea>
                             </div>
-
                             <div class="flex flex-col sm:flex-row gap-3 pt-2">
-                                <button type="submit"
+                                <button type="submit" id="contact-submit"
                                     class="btn-primary inline-flex h-12 items-center justify-center rounded-full px-7 text-sm font-semibold bg-[#22304a] text-[#f5f2ea] hover:brightness-95 transition shadow-sm shadow-[#22304a]/10"
                                     style="font-family: Manrope, ui-sans-serif, system-ui;">
-                                    Envoyer par email
+                                    Envoyer le message
                                 </button>
-
                                 <a href="#appointment"
                                     class="btn-secondary inline-flex h-12 items-center justify-center rounded-full px-7 text-sm font-medium border border-[#22304a]/15 bg-white/35 backdrop-blur-xl text-[#22304a] hover:bg-white/55 transition"
                                     style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
                                     Ou prendre rendez-vous
                                 </a>
                             </div>
-
-                            <p class="text-xs text-[#22304a]/60"
+                            <div id="contact-success"
+                                class="hidden rounded-2xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-800"
                                 style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
-                                Astuce : si tu veux un vrai formulaire (sans ouvrir le mail), il faudra un endpoint
-                                backend (Brevo, Formspree, API maison).
-                            </p>
+                                Message envoye. L'equipe Ochyro vous repondra rapidement.
+                            </div>
+                            <div id="contact-error"
+                                class="hidden rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800"
+                                style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
+                                Envoi impossible pour le moment. Reessayez dans quelques minutes.
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -366,14 +380,14 @@
                                     style="font-family: Manrope, ui-sans-serif, system-ui;">Ochyro IT</div>
                                 <div class="text-xs text-[#F5F2EA]/70"
                                     style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">Informatique
-                                    &amp; cybersécurité</div>
+                                    &amp; cybersÃ©curitÃ©</div>
                             </div>
                         </div>
 
                         <p class="mt-5 text-sm text-[#F5F2EA]/80 leading-relaxed"
                             style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
-                            Stabilité, sécurité et méthode pour les cabinets comptables — avec une approche proactive
-                            orientée production.
+                            StabilitÃ©, sÃ©curitÃ© et mÃ©thode pour les cabinets comptables â€” avec une approche proactive
+                            orientÃ©e production.
                         </p>
                     </div>
 
@@ -392,14 +406,14 @@
                                 style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
                                 <iconify-icon icon="solar:map-point-linear" width="18" class="text-[#38d0e0]"
                                     style="stroke-width:1.5;"></iconify-icon>
-                                Intervention à distance &amp; sur site
+                                Intervention Ã  distance &amp; sur site
                             </div>
                         </div>
                     </div>
 
                     <div>
                         <div class="text-xs font-semibold tracking-wide text-[#F5F2EA]/70 uppercase"
-                            style="font-family: Manrope, ui-sans-serif, system-ui;">Réseaux</div>
+                            style="font-family: Manrope, ui-sans-serif, system-ui;">RÃ©seaux</div>
                         <div class="mt-3 flex items-center gap-3">
                             <a href="#"
                                 class="btn-secondary inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/15 bg-white/5 hover:bg-white/10 transition"
@@ -435,11 +449,11 @@
                     class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                     <div class="text-xs text-[#F5F2EA]/70"
                         style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
-                        © <span id="year"></span> Ochyro IT — Tous droits réservés.
+                        Â© <span id="year"></span> Ochyro IT â€” Tous droits rÃ©servÃ©s.
                     </div>
                     <div class="text-xs text-[#F5F2EA]/70"
                         style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
-                        Disponibilité • Sécurité • Méthode
+                        DisponibilitÃ© â€¢ SÃ©curitÃ© â€¢ MÃ©thode
                     </div>
                 </div>
             </div>
@@ -454,19 +468,19 @@
                 languages: {
                     'fr': {
                         consent_modal: {
-                            title: 'Nous utilisons des cookies 🍪',
-                            description: 'Nous utilisons des cookies pour Calendly et Stripe afin d\'assurer le bon fonctionnement de la prise de rendez-vous et la sécurité. Les cookies essentiels sont toujours actifs. <button type="button" data-cc="c-settings" class="cc-link">Personnaliser</button>',
+                            title: 'Nous utilisons des cookies ðŸª',
+                            description: 'Nous utilisons des cookies pour Calendly et Stripe afin d\'assurer le bon fonctionnement de la prise de rendez-vous et la sÃ©curitÃ©. Les cookies essentiels sont toujours actifs. <button type="button" data-cc="c-settings" class="cc-link">Personnaliser</button>',
                             primary_btn: { text: 'Tout accepter', role: 'accept_all' },
                             secondary_btn: { text: 'Tout refuser', role: 'accept_necessary' }
                         },
                         settings_modal: {
-                            title: 'Préférences des cookies',
+                            title: 'PrÃ©fÃ©rences des cookies',
                             save_settings_btn: 'Enregistrer',
                             accept_all_btn: 'Tout accepter',
                             reject_all_btn: 'Tout refuser',
                             blocks: [
-                                { title: 'Cookies nécessaires', description: 'Essentiels pour Stripe (paiement/sécurité). Toujours actifs, ils ne peuvent pas être désactivés.', toggle: { value: 'essential', enabled: true, readonly: true } },
-                                { title: 'Services tiers', description: 'Utilisés par Calendly pour la gestion des rendez-vous. Vous pouvez les désactiver sans affecter les fonctions essentielles du site.', toggle: { value: 'targeting', enabled: false, readonly: false } }
+                                { title: 'Cookies nÃ©cessaires', description: 'Essentiels pour Stripe (paiement/sÃ©curitÃ©). Toujours actifs, ils ne peuvent pas Ãªtre dÃ©sactivÃ©s.', toggle: { value: 'essential', enabled: true, readonly: true } },
+                                { title: 'Services tiers', description: 'UtilisÃ©s par Calendly pour la gestion des rendez-vous. Vous pouvez les dÃ©sactiver sans affecter les fonctions essentielles du site.', toggle: { value: 'targeting', enabled: false, readonly: false } }
                             ]
                         }
                     }
@@ -483,7 +497,7 @@
     </script>
 
     <script>
-        // Gestion des accordéons FAQ
+        // Gestion des accordÃ©ons FAQ
         document.addEventListener('DOMContentLoaded', function () {
             const faqButtons = document.querySelectorAll('.faq-btn');
 
@@ -493,7 +507,7 @@
                     const icon = this.querySelector('.faq-ic');
                     const isExpanded = this.getAttribute('aria-expanded') === 'true';
 
-                    // Fermer tous les autres panneaux (accordéon exclusif)
+                    // Fermer tous les autres panneaux (accordÃ©on exclusif)
                     faqButtons.forEach(otherButton => {
                         if (otherButton !== this) {
                             const otherPanel = otherButton.nextElementSibling;
@@ -526,12 +540,16 @@
             const slides = document.querySelectorAll('.carousel-slide');
             const dots = document.querySelectorAll('.carousel-dot');
             const texts = [
-                'Supervision, durcissement, sauvegardes, mobilité sécurisée.',
-                'Protection contre les cyberattaques et conformité réglementaire.',
-                'Assistance technique et maintenance continue de vos systèmes.'
+                'Supervision, durcissement, sauvegardes, mobilitÃ© sÃ©curisÃ©e.',
+                'Protection contre les cyberattaques et conformitÃ© rÃ©glementaire.',
+                'Assistance technique et maintenance continue de vos systÃ¨mes.'
             ];
             const textContainer = document.querySelector('.carousel-text');
             const carouselWrapper = document.querySelector('.rounded-\\[2\\.5rem\\]');
+
+            if (!slides.length || !dots.length || slides.length !== dots.length) {
+                return;
+            }
 
             let currentSlide = 0;
             let autoplayInterval;
@@ -553,7 +571,7 @@
                 slides[index].classList.add('active');
                 dots[index].classList.add('active');
 
-                // Changer le texte avec animation marquée
+                // Changer le texte avec animation marquÃ©e
                 if (textContainer) {
                     textContainer.classList.add('changing');
                     setTimeout(() => {
@@ -588,7 +606,7 @@
                 });
             });
 
-            // Démarrer l'autoplay
+            // DÃ©marrer l'autoplay
             startAutoplay();
 
             // Pause au survol
@@ -620,7 +638,7 @@
                 });
             }, observerOptions);
 
-            // Observer tous les éléments animés
+            // Observer tous les Ã©lÃ©ments animÃ©s
             document.querySelectorAll('.animate-on-scroll, .scroll-animate').forEach(el => {
                 observer.observe(el);
             });
@@ -630,21 +648,69 @@
         const text = "pour votre cabinet comptable.";
         const speed = 75; // Vitesse en millisecondes
         let i = 0;
-
+        const typewriterElement = document.getElementById("typewriter");
         function typeWriter() {
+            if (!typewriterElement) {
+                return;
+            }
             if (i < text.length) {
-                document.getElementById("typewriter").innerHTML += text.charAt(i);
+                typewriterElement.innerHTML += text.charAt(i);
                 i++;
                 setTimeout(typeWriter, speed);
             } else {
-                // Optionnel : supprime le curseur à la fin de l'écriture
-                document.getElementById("typewriter").style.borderRight = "none";
+                typewriterElement.style.borderRight = "none";
             }
         }
-
-        // Lance l'animation au chargement de la page
-        window.onload = typeWriter;
+        window.addEventListener('load', typeWriter);
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contact-form');
+            const submitButton = document.getElementById('contact-submit');
+            const successBox = document.getElementById('contact-success');
+            const errorBox = document.getElementById('contact-error');
+            if (!form || !submitButton) {
+                return;
+            }
+            form.addEventListener('submit', async function (event) {
+                event.preventDefault();
+                if (successBox) successBox.classList.add('hidden');
+                if (errorBox) errorBox.classList.add('hidden');
+                const formData = new FormData(form);
+                const payload = {
+                    name: String(formData.get('name') || '').trim(),
+                    email: String(formData.get('email') || '').trim(),
+                    phone: String(formData.get('phone') || '').trim(),
+                    message: String(formData.get('message') || '').trim()
+                };
+                const defaultLabel = submitButton.textContent.trim();
+                submitButton.disabled = true;
+                submitButton.textContent = 'Envoi en cours...';
+                try {
+                    const response = await fetch('/contact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    const data = await response.json();
+                    if (!response.ok || !data.success) {
+                        throw new Error(data.error || 'Envoi impossible');
+                    }
+                    form.reset();
+                    if (successBox) successBox.classList.remove('hidden');
+                } catch (error) {
+                    if (errorBox) {
+                        errorBox.textContent = error.message || 'Envoi impossible pour le moment. Reessayez dans quelques minutes.';
+                        errorBox.classList.remove('hidden');
+                    }
+                } finally {
+                    submitButton.disabled = false;
+                    submitButton.textContent = defaultLabel;
+                }
+            });
+        });
     </script>
 </body>
 
 </html>
+

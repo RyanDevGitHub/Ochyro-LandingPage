@@ -22,6 +22,8 @@ $leadMagnetController = new LeadMagnetController();
 // Lead magnet — POST + OPTIONS (CORS preflight)
 $router->add('POST',    '/lead-magnet', [$leadMagnetController, 'subscribe']);
 $router->add('OPTIONS', '/lead-magnet', [$leadMagnetController, 'subscribe']);
+$router->add('POST',    '/contact', [$contactController, 'submit']);
+$router->add('OPTIONS', '/contact', [$contactController, 'submit']);
 
 $router->get('/', [$homeController, 'index']);
 $router->get('/rendez-vous-confirme', [$homeController, 'appointmentConfirmed']);
