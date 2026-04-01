@@ -5,6 +5,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/../app/Router.php';
 require_once __DIR__ . '/../app/controllers/HomeController.php';
 require_once __DIR__ . '/../app/controllers/InfogeranceController.php';
+require_once __DIR__ . '/../app/controllers/CasUsageController.php';
 require_once __DIR__ . '/../app/controllers/ContactController.php';
 require_once __DIR__ . '/../app/controllers/BlogController.php';
 require_once __DIR__ . '/../app/controllers/LeadMagnetController.php';
@@ -13,6 +14,7 @@ $router = new Router();
 
 $homeController       = new HomeController();
 $infogeranceController = new InfogeranceController();
+$casUsageController   = new CasUsageController();
 $contactController    = new ContactController();
 $blogController       = new BlogController();
 $leadMagnetController = new LeadMagnetController();
@@ -24,6 +26,7 @@ $router->add('OPTIONS', '/lead-magnet', [$leadMagnetController, 'subscribe']);
 $router->get('/', [$homeController, 'index']);
 $router->get('/rendez-vous-confirme', [$homeController, 'appointmentConfirmed']);
 $router->get('/infogerance', [$infogeranceController, 'index']);
+$router->get('/cas-usage', [$casUsageController, 'index']);
 $router->get('/contact', [$contactController, 'index']);
 $router->get('/blog', [$blogController, 'index']);
 
