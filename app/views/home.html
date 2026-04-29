@@ -174,7 +174,7 @@
             defaults: '2026-01-30'
         })
     </script>
-        <!-- Google tag (gtag.js) -->
+        <!-- Google tag (gtag.js) avec Consent Mode v2 -->
     <script>
         (function () {
             const host = window.location.hostname;
@@ -190,13 +190,26 @@
                 return;
             }
 
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function () { dataLayer.push(arguments); };
+
+            // Consent Mode v2 — par défaut tout est refusé jusqu'au choix utilisateur
+            gtag('consent', 'default', {
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                analytics_storage: 'denied',
+                functionality_storage: 'denied',
+                personalization_storage: 'denied',
+                security_storage: 'granted',
+                wait_for_update: 500
+            });
+
             const gtagScript = document.createElement('script');
             gtagScript.async = true;
             gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17987750029';
             document.head.appendChild(gtagScript);
 
-            window.dataLayer = window.dataLayer || [];
-            window.gtag = function () { dataLayer.push(arguments); };
             gtag('js', new Date());
             gtag('config', 'AW-17987750029');
         })();
@@ -746,6 +759,114 @@
             </div>
         </section>
 
+        <!-- Avant Ochyro / Avec Ochyro -->
+        <section class="py-16 sm:py-20 bg-white/40">
+            <div class="mx-auto max-w-7xl px-6">
+                <div class="max-w-3xl">
+                    <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-[#22304a]"
+                        style="font-family: Manrope, ui-sans-serif, system-ui;">
+                        Avant Ochyro / Avec Ochyro
+                    </h2>
+                    <p class="mt-4 text-base text-[#22304a]/75 leading-relaxed"
+                        style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
+                        Ce que vous gagnez concrètement en confiant votre informatique à un MSP spécialisé cabinets comptables.
+                    </p>
+                </div>
+
+                <div class="mt-12 grid gap-6 md:grid-cols-2">
+                    <div class="rounded-2xl border border-[#22304a]/10 bg-[#22304a]/[0.03] p-6 sm:p-8">
+                        <div class="flex items-center gap-3">
+                            <div class="h-11 w-11 rounded-xl bg-[#22304a]/10 text-[#22304a] flex items-center justify-center">
+                                <iconify-icon icon="solar:close-circle-linear" width="22" style="stroke-width:1.5;"></iconify-icon>
+                            </div>
+                            <h3 class="text-lg font-semibold text-[#22304a]"
+                                style="font-family: Manrope, ui-sans-serif, system-ui;">Avant Ochyro</h3>
+                        </div>
+                        <ul class="mt-6 space-y-4 text-sm text-[#22304a]/80 leading-relaxed"
+                            style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
+                            <li class="flex gap-3">
+                                <iconify-icon icon="solar:close-circle-linear" width="18" class="shrink-0 mt-0.5 text-[#22304a]/50" style="stroke-width:1.5;"></iconify-icon>
+                                <span>Cegid qui plante le 15&nbsp;: panique, le cabinet à l'arrêt, on appelle l'éditeur, on patiente.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <iconify-icon icon="solar:close-circle-linear" width="18" class="shrink-0 mt-0.5 text-[#22304a]/50" style="stroke-width:1.5;"></iconify-icon>
+                                <span>Sauvegardes&nbsp;? «&nbsp;Oui, oui&nbsp;»&nbsp;— mais personne n'a testé une restauration depuis 18 mois.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <iconify-icon icon="solar:close-circle-linear" width="18" class="shrink-0 mt-0.5 text-[#22304a]/50" style="stroke-width:1.5;"></iconify-icon>
+                                <span>Conformité RGPD article 32&nbsp;: aucune trace écrite à présenter en cas de contrôle CNIL.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <iconify-icon icon="solar:close-circle-linear" width="18" class="shrink-0 mt-0.5 text-[#22304a]/50" style="stroke-width:1.5;"></iconify-icon>
+                                <span>Plusieurs prestataires se renvoient la balle&nbsp;: Cegid, l'éditeur fiscal, le réseau, le dépanneur.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <iconify-icon icon="solar:close-circle-linear" width="18" class="shrink-0 mt-0.5 text-[#22304a]/50" style="stroke-width:1.5;"></iconify-icon>
+                                <span>Tickets sans suivi, sans priorité, sans engagement écrit sur les délais d'intervention.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <iconify-icon icon="solar:close-circle-linear" width="18" class="shrink-0 mt-0.5 text-[#22304a]/50" style="stroke-width:1.5;"></iconify-icon>
+                                <span>Coûts imprévisibles&nbsp;: dépannages facturés à l'heure, devis surprise, pas de budget annuel clair.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="rounded-2xl border border-[#38d0e0]/30 bg-gradient-to-br from-[#22304a] to-[#1a2538] p-6 sm:p-8 text-[#F5F2EA] relative overflow-hidden">
+                        <div class="absolute -top-16 -right-16 h-64 w-64 rounded-full opacity-20"
+                            style="background: radial-gradient(circle, rgba(56, 208, 224, 0.6), transparent 65%);"></div>
+                        <div class="relative">
+                            <div class="flex items-center gap-3">
+                                <div class="h-11 w-11 rounded-xl bg-[#38d0e0]/15 text-[#38d0e0] flex items-center justify-center">
+                                    <iconify-icon icon="solar:check-circle-linear" width="22" style="stroke-width:1.5;"></iconify-icon>
+                                </div>
+                                <h3 class="text-lg font-semibold text-[#F5F2EA]"
+                                    style="font-family: Manrope, ui-sans-serif, system-ui;">Avec Ochyro</h3>
+                            </div>
+                            <ul class="mt-6 space-y-4 text-sm text-[#F5F2EA]/90 leading-relaxed"
+                                style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
+                                <li class="flex gap-3">
+                                    <iconify-icon icon="solar:check-circle-bold" width="18" class="shrink-0 mt-0.5 text-[#38d0e0]" style="stroke-width:1.5;"></iconify-icon>
+                                    <span>Supervision 24/7 des serveurs Cegid&nbsp;: l'incident est détecté avant que le collaborateur ne le voie.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <iconify-icon icon="solar:check-circle-bold" width="18" class="shrink-0 mt-0.5 text-[#38d0e0]" style="stroke-width:1.5;"></iconify-icon>
+                                    <span>Sauvegardes 3-2-1 immuables, restauration testée chaque mois&nbsp;— rapport remis au cabinet.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <iconify-icon icon="solar:check-circle-bold" width="18" class="shrink-0 mt-0.5 text-[#38d0e0]" style="stroke-width:1.5;"></iconify-icon>
+                                    <span>Conformité RGPD article 32 documentée&nbsp;: registre, journaux, preuves prêtes à présenter.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <iconify-icon icon="solar:check-circle-bold" width="18" class="shrink-0 mt-0.5 text-[#38d0e0]" style="stroke-width:1.5;"></iconify-icon>
+                                    <span>Un interlocuteur unique&nbsp;: nous orchestrons Cegid, ACD, l'éditeur fiscal et le réseau pour vous.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <iconify-icon icon="solar:check-circle-bold" width="18" class="shrink-0 mt-0.5 text-[#38d0e0]" style="stroke-width:1.5;"></iconify-icon>
+                                    <span>Délai d'intervention &lt;&nbsp;2&nbsp;h sur incident bloquant, suivi par ticket et reporting mensuel.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <iconify-icon icon="solar:check-circle-bold" width="18" class="shrink-0 mt-0.5 text-[#38d0e0]" style="stroke-width:1.5;"></iconify-icon>
+                                    <span>Forfait mensuel fixe et tout-inclus&nbsp;: budget IT prévisible, zéro facture surprise.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 flex flex-wrap items-center gap-4">
+                    <a href="#appointment"
+                        class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold bg-[#22304a] text-[#F5F2EA] hover:bg-[#1a2538] transition shadow-sm shadow-black/10"
+                        style="font-family: Manrope, ui-sans-serif, system-ui;">
+                        Faire le diagnostic de mon cabinet
+                    </a>
+                    <p class="text-xs text-[#22304a]/65"
+                        style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
+                        Audit gratuit · Rapport PDF sous 48 h · Sans engagement
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <!-- Services -->
         <section id="services" class="py-20 sm:py-24 relative overflow-hidden">
             <div class="absolute inset-0 pointer-events-none">
@@ -905,6 +1026,10 @@
                                 </div>
                             </div>
                         </div>
+                        <a href="/cybersecurite" class="mt-6 inline-flex text-sm font-semibold text-[#22304a] transition"
+                            style="font-family: Manrope, ui-sans-serif, system-ui;">
+                            Voir le détail cybersécurité
+                        </a>
                     </div>
 
                     <!-- Troisième carte (si vous en avez une) -->
@@ -965,6 +1090,10 @@
                                 Postes mobiles durcis
                             </li>
                         </ul>
+                        <a href="/cloud-mobilite" class="mt-6 inline-flex text-sm font-semibold text-[#22304a] transition"
+                            style="font-family: Manrope, ui-sans-serif, system-ui;">
+                            Voir le détail cloud &amp; mobilité
+                        </a>
                     </div>
                 </div>
                 <div
@@ -2042,9 +2171,11 @@
                         style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
                         © <span id="year"></span> Ochyro IT — Tous droits réservés.
                     </div>
-                    <div class="text-xs text-[#F5F2EA]/70"
+                    <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-[#F5F2EA]/70"
                         style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
-                        Disponibilité • Sécurité • Méthode
+                        <a href="/mentions-legales" class="hover:text-white transition">Mentions légales</a>
+                        <a href="/politique-de-confidentialite" class="hover:text-white transition">Confidentialité</a>
+                        <button type="button" id="footer-cookies-btn" class="hover:text-white transition cursor-pointer">Gérer les cookies</button>
                     </div>
                 </div>
             </div>
@@ -2064,13 +2195,42 @@
     <script>
         window.addEventListener('load', function () {
             var cc = initCookieConsent();
+
+            function pushConsent(level) {
+                if (typeof window.gtag !== 'function') return;
+                var marketing = level.indexOf('marketing') !== -1 ? 'granted' : 'denied';
+                var analytics = level.indexOf('analytics') !== -1 ? 'granted' : 'denied';
+                window.gtag('consent', 'update', {
+                    ad_storage: marketing,
+                    ad_user_data: marketing,
+                    ad_personalization: marketing,
+                    analytics_storage: analytics,
+                    functionality_storage: analytics,
+                    personalization_storage: analytics
+                });
+            }
+
+            window.cc = cc;
+            var footerCookiesBtn = document.getElementById('footer-cookies-btn');
+            if (footerCookiesBtn) {
+                footerCookiesBtn.addEventListener('click', function () {
+                    cc.showSettings();
+                });
+            }
+
             cc.run({
                 current_lang: 'fr',
+                onAccept: function (cookie) {
+                    pushConsent(cookie.level || []);
+                },
+                onChange: function (cookie) {
+                    pushConsent(cookie.level || []);
+                },
                 languages: {
                     'fr': {
                         consent_modal: {
                             title: 'Nous utilisons des cookies 🍪',
-                            description: 'Nous utilisons des cookies pour Calendly et Stripe afin d\'assurer le bon fonctionnement de la prise de rendez-vous et la sécurité. Les cookies essentiels sont toujours actifs. <button type="button" data-cc="c-settings" class="cc-link">Personnaliser</button>',
+                            description: 'Cookies essentiels au fonctionnement du site, et — si vous l\'acceptez — cookies analytiques et publicitaires (Google Ads) pour mesurer la performance de nos campagnes. <a href="/politique-de-confidentialite" class="cc-link">En savoir plus</a>.',
                             primary_btn: { text: 'Tout accepter', role: 'accept_all' },
                             secondary_btn: { text: 'Tout refuser', role: 'accept_necessary' }
                         },
@@ -2080,8 +2240,9 @@
                             accept_all_btn: 'Tout accepter',
                             reject_all_btn: 'Tout refuser',
                             blocks: [
-                                { title: 'Cookies nécessaires', description: 'Essentiels pour Stripe (paiement/sécurité). Toujours actifs, ils ne peuvent pas être désactivés.', toggle: { value: 'essential', enabled: true, readonly: true } },
-                                { title: 'Services tiers', description: 'Utilisés par Calendly pour la gestion des rendez-vous. Vous pouvez les désactiver sans affecter les fonctions essentielles du site.', toggle: { value: 'targeting', enabled: false, readonly: false } }
+                                { title: 'Cookies nécessaires', description: 'Essentiels au fonctionnement du site (sécurité, prise de rendez-vous Calendly). Toujours actifs.', toggle: { value: 'essential', enabled: true, readonly: true } },
+                                { title: 'Mesure d\'audience', description: 'Statistiques de visite anonymisées (PostHog) pour améliorer le site.', toggle: { value: 'analytics', enabled: false, readonly: false } },
+                                { title: 'Marketing & publicité', description: 'Google Ads — mesure des conversions issues de nos campagnes publicitaires.', toggle: { value: 'marketing', enabled: false, readonly: false } }
                             ]
                         }
                     }

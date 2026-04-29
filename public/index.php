@@ -9,6 +9,9 @@ require_once __DIR__ . '/../app/controllers/CasUsageController.php';
 require_once __DIR__ . '/../app/controllers/ContactController.php';
 require_once __DIR__ . '/../app/controllers/BlogController.php';
 require_once __DIR__ . '/../app/controllers/LeadMagnetController.php';
+require_once __DIR__ . '/../app/controllers/LegalController.php';
+require_once __DIR__ . '/../app/controllers/CybersecuriteController.php';
+require_once __DIR__ . '/../app/controllers/CloudMobiliteController.php';
 
 $router = new Router();
 
@@ -18,6 +21,9 @@ $casUsageController   = new CasUsageController();
 $contactController    = new ContactController();
 $blogController       = new BlogController();
 $leadMagnetController = new LeadMagnetController();
+$legalController      = new LegalController();
+$cybersecuriteController = new CybersecuriteController();
+$cloudMobiliteController = new CloudMobiliteController();
 
 // Lead magnet — POST + OPTIONS (CORS preflight)
 $router->add('POST',    '/lead-magnet', [$leadMagnetController, 'subscribe']);
@@ -31,6 +37,10 @@ $router->get('/infogerance', [$infogeranceController, 'index']);
 $router->get('/cas-usage', [$casUsageController, 'index']);
 $router->get('/contact', [$contactController, 'index']);
 $router->get('/blog', [$blogController, 'index']);
+$router->get('/mentions-legales', [$legalController, 'mentions']);
+$router->get('/politique-de-confidentialite', [$legalController, 'privacy']);
+$router->get('/cybersecurite', [$cybersecuriteController, 'index']);
+$router->get('/cloud-mobilite', [$cloudMobiliteController, 'index']);
 
 foreach (BlogController::slugs() as $blogSlug) {
     $router->get('/blog/' . $blogSlug, static function () use ($blogController, $blogSlug): void {

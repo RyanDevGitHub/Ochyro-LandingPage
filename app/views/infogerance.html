@@ -1332,9 +1332,12 @@
                     <div class="text-xs text-[#F5F2EA]/70"
                         style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">© <span id="year"></span>
                         Ochyro IT — Tous droits réservés.</div>
-                    <div class="text-xs text-[#F5F2EA]/70"
-                        style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">Disponibilité • Sécurité •
-                        Méthode</div>
+                    <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-[#F5F2EA]/70"
+                        style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
+                        <a href="/mentions-legales" class="hover:text-white transition">Mentions légales</a>
+                        <a href="/politique-de-confidentialite" class="hover:text-white transition">Confidentialité</a>
+                        <button type="button" id="footer-cookies-btn" class="hover:text-white transition cursor-pointer">Gérer les cookies</button>
+                    </div>
                 </div>
             </div>
         </footer>
@@ -1343,6 +1346,12 @@
     <script>
         window.addEventListener('load', function () {
             var cc = initCookieConsent();
+            var footerCookiesBtn = document.getElementById('footer-cookies-btn');
+            if (footerCookiesBtn) {
+                footerCookiesBtn.addEventListener('click', function () {
+                    cc.showSettings();
+                });
+            }
             cc.run({
                 current_lang: 'fr',
                 languages: {
