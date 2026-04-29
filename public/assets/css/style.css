@@ -614,6 +614,11 @@ section {
     animation: btnPulse 2s ease-in-out infinite;
 }
 
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
+}
+
 @keyframes btnPulse {
 
     0%,
@@ -1597,8 +1602,16 @@ video {
     border-color: rgb(56 208 224 / var(--tw-border-opacity, 1))
 }
 
+.border-\[\#38d0e0\]\/30 {
+    border-color: rgb(56 208 224 / 0.3)
+}
+
 .border-\[\#38d0e0\]\/35 {
     border-color: rgb(56 208 224 / 0.35)
+}
+
+.border-\[\#38d0e0\]\/40 {
+    border-color: rgb(56 208 224 / 0.4)
 }
 
 .border-white\/35 {
@@ -1622,6 +1635,14 @@ video {
     background-color: rgb(34 48 74 / var(--tw-bg-opacity, 1))
 }
 
+.bg-\[\#22304a\]\/\[0\.03\] {
+    background-color: rgb(34 48 74 / 0.03)
+}
+
+.bg-\[\#22304a\]\/10 {
+    background-color: rgb(34 48 74 / 0.1)
+}
+
 .bg-\[\#22304a\]\/20 {
     background-color: rgb(34 48 74 / 0.2)
 }
@@ -1635,6 +1656,14 @@ video {
     background-color: rgb(56 208 224 / var(--tw-bg-opacity, 1))
 }
 
+.bg-\[\#38d0e0\]\/10 {
+    background-color: rgb(56 208 224 / 0.1)
+}
+
+.bg-\[\#38d0e0\]\/15 {
+    background-color: rgb(56 208 224 / 0.15)
+}
+
 .bg-\[\#38d0e0\]\/20 {
     background-color: rgb(56 208 224 / 0.2)
 }
@@ -1645,6 +1674,10 @@ video {
 
 .bg-\[\#38d0e0\]\/70 {
     background-color: rgb(56 208 224 / 0.7)
+}
+
+.bg-\[\#38d0e0\]\/85 {
+    background-color: rgb(56 208 224 / 0.85)
 }
 
 .bg-\[\#F5F2EA\] {
@@ -1709,6 +1742,20 @@ video {
 
 .bg-gradient-to-r {
     background-image: linear-gradient(to right, var(--tw-gradient-stops))
+}
+
+.bg-gradient-to-br {
+    background-image: linear-gradient(to bottom right, var(--tw-gradient-stops))
+}
+
+.from-\[\#22304a\] {
+    --tw-gradient-from: #22304a var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(34 48 74 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+
+.to-\[\#1a2538\] {
+    --tw-gradient-to: #1a2538 var(--tw-gradient-to-position)
 }
 
 .from-\[\#F5F2EA\] {
@@ -1953,6 +2000,10 @@ video {
     color: rgb(34 48 74 / 0.8)
 }
 
+.text-\[\#22304a\]\/50 {
+    color: rgb(34 48 74 / 0.5)
+}
+
 .text-\[\#2D2D2D\] {
     --tw-text-opacity: 1;
     color: rgb(45 45 45 / var(--tw-text-opacity, 1))
@@ -1988,6 +2039,10 @@ video {
 
 .text-\[\#F5F2EA\]\/85 {
     color: rgb(245 242 234 / 0.85)
+}
+
+.text-\[\#F5F2EA\]\/90 {
+    color: rgb(245 242 234 / 0.9)
 }
 
 .antialiased {
