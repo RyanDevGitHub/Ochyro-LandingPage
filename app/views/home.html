@@ -304,9 +304,15 @@
                         </div>
 
                         <h1 class="hero-title text-[#22304a]">
-                            Zéro interruption sur Cegid, Sage &amp; ACD <br class="hidden sm:block">
-                            <span class="text-[#38d0e0] border-r-4 border-[#38d0e0] pr-1" id="typewriter"></span>
+                            Zéro interruption informatique pour cabinets comptables.
                         </h1>
+
+                        <div class="mt-4 flex items-center gap-2 text-sm sm:text-base text-[#22304a]/80"
+                            style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
+                            <span class="inline-flex h-2 w-2 rounded-full bg-[#38d0e0] shrink-0"></span>
+                            <span class="font-medium text-[#22304a]">Cegid · Sage · ACD ·</span>
+                            <span id="benefit-rotator" class="font-semibold text-[#38d0e0] truncate transition-opacity duration-300"></span>
+                        </div>
 
                         <p class="mt-6 text-lg sm:text-xl text-[#22304a]/75 leading-relaxed"
                             style="font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui;">
@@ -2263,44 +2269,29 @@
     <script>
         (function () {
             const phrases = [
-                "même le 15 du mois.",
-                "même en pleine liasse fiscale.",
-                "RGPD Article 32 couvert.",
-                "sauvegardes restaurées chaque mois."
+                "même le 15 du mois",
+                "même en pleine liasse fiscale",
+                "RGPD Article 32 couvert",
+                "sauvegardes restaurées chaque mois"
             ];
-            const target = document.getElementById("typewriter");
+            const target = document.getElementById("benefit-rotator");
             if (!target) return;
 
-            const TYPE_SPEED = 60;
-            const ERASE_SPEED = 30;
-            const HOLD_DELAY = 2200;
-            let phraseIdx = 0;
-            let charIdx = 0;
-            let erasing = false;
+            const HOLD_MS = 2800;
+            const FADE_MS = 300;
+            let idx = 0;
 
-            function tick() {
-                const phrase = phrases[phraseIdx];
-                if (!erasing) {
-                    charIdx++;
-                    target.textContent = phrase.slice(0, charIdx);
-                    if (charIdx === phrase.length) {
-                        erasing = true;
-                        setTimeout(tick, HOLD_DELAY);
-                        return;
-                    }
-                    setTimeout(tick, TYPE_SPEED);
-                } else {
-                    charIdx--;
-                    target.textContent = phrase.slice(0, charIdx);
-                    if (charIdx === 0) {
-                        erasing = false;
-                        phraseIdx = (phraseIdx + 1) % phrases.length;
-                    }
-                    setTimeout(tick, ERASE_SPEED);
-                }
-            }
+            target.style.opacity = "1";
+            target.textContent = phrases[0];
 
-            tick();
+            setInterval(function () {
+                target.style.opacity = "0";
+                setTimeout(function () {
+                    idx = (idx + 1) % phrases.length;
+                    target.textContent = phrases[idx];
+                    target.style.opacity = "1";
+                }, FADE_MS);
+            }, HOLD_MS);
         })();
     </script>
 
