@@ -16,7 +16,7 @@ final class ContactController extends Controller
 
     public function index(): void
     {
-        $this->render('contact.html');
+        $this->render('contact.php');
     }
 
     public function submit(): void
@@ -43,9 +43,16 @@ final class ContactController extends Controller
         $phone = trim((string) ($data['phone'] ?? ''));
         $message = trim((string) ($data['message'] ?? ''));
 
+        // Champ piège invisible : seuls les robots le remplissent. On répond « succès » sans rien envoyer.
+        if (trim((string) ($data['website'] ?? '')) !== '') {
+            http_response_code(200);
+            echo json_encode(['success' => true]);
+            return;
+        }
+
         if ($name === '' || $email === '' || $message === '') {
             http_response_code(422);
-            echo json_encode(['success' => false, 'error' => 'Merci de renseigner le nom, l’email et le message.']);
+            echo json_encode(['success' => false, 'error' => 'Merci de renseigner votre nom, votre email et votre message.']);
             return;
         }
 

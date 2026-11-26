@@ -1,36 +1,29 @@
-# Ochyro IT - Informatique & Cybersécurité pour Experts-Comptables
+# Ochyro — Automatisation IA pour les entreprises
 
-MSP (Managed Services Provider) spécialisée dans l'accompagnement des cabinets comptables. L'objectif principal est de garantir "zéro interruption informatique", particulièrement durant les périodes de forte activité fiscale.
+Ochyro aide les entreprises à identifier, puis à automatiser avec l'IA, les tâches répétitives de leur workflow : emails, saisie de documents, relances commerciales, reporting, back-office, assistants internes. L'appel découverte de 30 minutes et le devis sont gratuits et sans engagement.
 
-## Services Principaux
+## Pages
+* [Accueil](https://ochyro.net/) : présentation de l'offre et prise de rendez-vous
+* [Ce qu'on automatise](https://ochyro.net/services) : les huit domaines d'automatisation, avec exemples
+* [Cas d'usage](https://ochyro.net/cas-usage) : scénarios types avant / après
+* [Contact](https://ochyro.net/contact) : réserver un appel gratuit ou écrire à l'équipe
 
-### 1. Infogérance Préventive (Service 01)
-* **Supervision & Alerting** : Surveillance proactive des infrastructures pour agir avant l'incident.
-* **Optimisation** : Patching et maintenance régulière des postes et serveurs.
-* **Mises à jour maîtrisées** : Gestion des updates sans surprise pour les utilisateurs.
-* **Documentation** : Suivi rigoureux de l'infrastructure du cabinet.
+## Domaines d'automatisation
+* Emails et demandes entrantes : tri, brouillons de réponse, création de fiches
+* Documents et saisie de données : extraction depuis PDF, scans et pièces jointes
+* Leads et relances commerciales : qualification, enrichissement, relances
+* Reporting et tableaux de bord : consolidation des sources, rapports rédigés
+* Back-office et administratif : onboarding, relances, comptes rendus
+* Assistant interne et support client : réponses à partir des documents de l'entreprise
+* Contenu et marketing : déclinaison et production relues avant publication
+* Liaison entre outils : fin de la double saisie, sans changer d'outils
 
-### 2. Cybersécurité & Sauvegardes Immuables (Service 02)
-* **Protection Ransomware** : Stratégies pour contrer les infections pouvant immobiliser la production.
-* **Sauvegardes Immuables** : Mise en place de copies de données protégées contre toute modification, avec tests de restauration réguliers.
-* **Gestion des Accès** : Implémentation du MFA (Multi-Factor Authentication), gestion des privilèges et segmentation du réseau.
-* **Conformité RGPD** : Durcissement des systèmes et journalisation des accès pour répondre aux obligations légales.
+## Méthode
+1. Appel découverte gratuit (30 minutes)
+2. Cartographie des automatisations possibles et devis gratuit
+3. Mise en place et formation
+4. Suivi et amélioration
 
-### 3. Cloud & Mobilité (Service 03)
-* **Télétravail Sécurisé** : Accès distant via des politiques de sécurité strictes et MFA.
-* **Microsoft 365** : Sécurisation et gouvernance de la messagerie et des outils collaboratifs.
-* **Postes Mobiles Durcis** : Sécurisation du matériel utilisé hors du cabinet.
-
-## Expertise Métier (Logiciels Comptables)
-Le service est spécifiquement optimisé pour résoudre les problématiques courantes du secteur :
-* **Optimisation logicielle** : Résolution des lenteurs sur les outils métiers comme **Cegid**.
-* **Disponibilité Serveur** : Prévention des pannes critiques durant les échéances fiscales (ex: le 15 du mois).
-
-## Proposition de Valeur
-* **Proactivité** : Intervention avant que l'incident ne se produise.
-* **Performance** : Garantie d'applications fluides et d'un système performant sous charge.
-* **Support Réactif** : Assistance disponible 24/7 pour débloquer les équipes rapidement.
-
-## Contact & Diagnostic
-* **Audit Gratuit** : Diagnostic de 15 à 30 minutes focalisé sur les risques et les actions prioritaires.
-* **Téléphone** : 07 57 82 04 40.
+## Contact
+* Téléphone : 07 57 82 04 40
+* Réserver un appel : https://ochyro.net/contact#rdv
